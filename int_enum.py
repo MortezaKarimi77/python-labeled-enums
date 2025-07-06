@@ -6,6 +6,13 @@ class BaseIntEnum(IntEnum):
     _label: str
 
     def __new__(cls, *values) -> Self:
+        """
+        Called only at class-definition time with:
+         - (value,)        → no label
+         - (value, label)  → with label
+
+        Lookup at runtime (one-arg) never reaches here.
+        """
         if len(values) not in (1, 2):
             raise TypeError(f"Invalid arguments for int enum: {values!r}")
 
