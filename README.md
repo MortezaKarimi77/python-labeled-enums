@@ -1,6 +1,5 @@
 # Python Labeled Enums
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A flexible Python library that extends the standard `enum.Enum`, `enum.IntEnum`, and `enum.StrEnum` classes to support optional human-readable display labels for each enum member. This functionality is inspired by Django's `choices` pattern, making it easier to represent values that have both an internal identifier and a user-friendly description.
 
