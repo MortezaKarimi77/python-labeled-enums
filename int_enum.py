@@ -1,11 +1,11 @@
 from enum import IntEnum
-from typing import Self
+from typing import Any, Self
 
 
 class BaseIntEnum(IntEnum):
     _label: str
 
-    def __new__(cls, *values) -> Self:
+    def __new__(cls, *values: Any) -> Self:
         """
         Called only at class-definition time with:
          - (value,)        → no label
